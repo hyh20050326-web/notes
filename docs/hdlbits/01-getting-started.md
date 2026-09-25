@@ -22,6 +22,21 @@
 
 ---
 
+### 3. for循环
+- **要求**：统计输入向量中“1”的个数。请构建一个用于255位输入向量的数量计数电路。
+- **参考代码**：
+  ```verilog
+  module top_module( 
+    input [254:0] in,
+    output reg [7:0] out );
+
+    always@(*) begin
+        out = 8'd0;
+        for(int i = 0;i < 255;i = i + 1)
+            out = out + in[i];
+    end
+endmodule
+
 ::: tip 待补充
 点击右上方或底部的「在 GitHub 上编辑此页」，记录您的刷题思路。
 :::
