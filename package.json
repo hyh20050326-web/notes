@@ -1,0 +1,23 @@
+{
+  "name": "my-study-notes",
+  "version": "1.0.0",
+  "description": "基于 VitePress 构建的现代化个人在线学习笔记与知识库",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "notes",
+    "vitepress",
+    "knowledge-base",
+    "markdown"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.6.4"
+  }
+}

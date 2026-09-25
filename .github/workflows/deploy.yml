@@ -1,0 +1,55 @@
+name: 部署知识库网站至 GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 监听 main 分支的提交（如果您的主分支是 master，请修改为 master）
+
+# 设置 GITHUB_TOKEN 权限以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 保证同一时间只有一个部署任务运行
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取全部提交历史，以便正确显示文章最后更新时间
+
+      - name: 配置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: 安装项目依赖
+        run: npm ci
+
+      - name: 编译构建 VitePress 静态网站
+        run: npm run docs:build
+
+      - name: 上传构建产物至 Pages 构件池
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: 自动化发布上线
+    steps:
+      - name: 部署至 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
