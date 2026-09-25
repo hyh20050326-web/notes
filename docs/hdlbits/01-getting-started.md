@@ -36,7 +36,7 @@
             out = out + in[i];
     end
   endmodule
-...
+  ...
   
 ::: tip 待补充
 点击右上方或底部的「在 GitHub 上编辑此页」，记录您的刷题思路。
