@@ -2,31 +2,34 @@
 layout: home
 
 hero:
-  name: "我的学习知识库"
-  text: "记录思考，沉淀技术与智慧"
-  tagline: "基于 VitePress 构建的现代化在线笔记系统 · 随处可读 · 在线可编 · 毫秒级检索"
+  name: "数字 IC 学习笔记"
+  text: "从门电路到 RISC-V 芯片架构"
+  tagline: "HDLBits 刷题 · “一生一芯”手搓 CPU · 数字 IC 面试核心八股 · 随时随地在线记录"
   image:
     src: /logo.svg
-    alt: 知识库 Logo
+    alt: 数字 IC 知识库 Logo
   actions:
     - theme: brand
-      text: 🚀 开始阅读笔记
-      link: /computer-basics/transistor-to-cpu
+      text: 🎯 HDL Bits 刷题
+      link: /hdlbits/
     - theme: alt
-      text: ✏️ 了解如何在线编辑
-      link: /computer-basics/tools-and-git#如何随时随地在线编辑笔记
+      text: 🚀 一生一芯实战
+      link: /ysyx/
+    - theme: alt
+      text: 📚 基础八股精选
+      link: /ic-interview/
 
 features:
+  - icon: 🧩
+    title: HDL Bits 刷题笔记
+    details: 系统整理 Verilog 组合逻辑、时序电路、移位寄存器与状态机 FSM 的解题技巧与踩坑记录。
   - icon: ⚡
-    title: 极速加载与现代设计
-    details: 采用 VitePress 强力驱动，开箱具备三栏文档排版、暗黑模式无缝切换与极速 SPA 浏览体验。
-  - icon: 🌐
-    title: 全球免费云端部署
-    details: 一键发布至 GitHub Pages 或 Vercel，随时通过电脑、平板或手机浏览器直接访问。
+    title: “一生一芯” 学习全流程
+    details: 记录从预学习、Verilator 仿真、NEMU 模拟器 PA 实验到 NPC 硬件手搓 RISC-V 处理器的完整旅程。
+  - icon: 🎯
+    title: 数字 IC 核心基础八股
+    details: 提炼静态时序分析 STA、跨时钟域 CDC、亚稳态、异步 FIFO 以及低功耗设计的高频面试硬核干货。
   - icon: ✍️
-    title: 在线随时可编辑
-    details: 无需本地安装环境，在网页端按下「.」键或点击底部「编辑此页」，即可在浏览器中像 VS Code 一样随时写笔记。
-  - icon: 🔍
-    title: 离线毫秒级全文检索
-    details: 内置本地快速分词搜索引擎，无须搭建繁重后端，瞬间定位你的每一篇知识点。
+    title: 随处可读 · 在线可写
+    details: 在电脑或手机浏览器按快捷键「.」即可随时随地打开网页版 VS Code 在线记录与自动发布。
 ---

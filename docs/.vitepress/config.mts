@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 // 参考 VitePress 官方文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 网站标题与元数据
-  title: "我的学习知识库",
-  description: "记录学习、技术探索与成长的在线数字花园",
+  title: "数字 IC 学习笔记",
+  description: "聚焦 HDLBits 刷题、一生一芯 RISC-V 处理器与芯片设计核心八股",
   lang: 'zh-CN',
   
   // 部署在 GitHub Pages 时，仓库名为 notes，必须设置 base 为 '/notes/'
@@ -12,7 +12,7 @@ export default defineConfig({
 
   // 浏览器标签页图标
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }]
+    ['link', { rel: 'icon', href: '/notes/logo.svg' }]
   ],
 
   // Markdown 语法增强配置
@@ -25,86 +25,73 @@ export default defineConfig({
   themeConfig: {
     // 网站 Logo
     logo: '/logo.svg',
-    siteTitle: '我的学习知识库',
+    siteTitle: '数字 IC 学习笔记',
 
     // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
       { 
-        text: '计算机基础', 
-        link: '/computer-basics/transistor-to-cpu',
-        activeMatch: '/computer-basics/'
+        text: 'HDL Bits', 
+        link: '/hdlbits/',
+        activeMatch: '/hdlbits/'
       },
       { 
-        text: '编程开发', 
-        link: '/programming/web-development',
-        activeMatch: '/programming/'
+        text: '一生一芯', 
+        link: '/ysyx/',
+        activeMatch: '/ysyx/'
       },
       { 
-        text: '数据结构与算法', 
-        link: '/algorithms/index',
-        activeMatch: '/algorithms/'
-      },
-      { 
-        text: '读书与随笔', 
-        link: '/reading-notes/index',
-        activeMatch: '/reading-notes/'
+        text: '基础八股', 
+        link: '/ic-interview/',
+        activeMatch: '/ic-interview/'
       }
     ],
 
     // 侧边栏多级导航树配置
     sidebar: {
-      '/computer-basics/': [
+      '/hdlbits/': [
         {
-          text: '一、计算机是怎么回事',
+          text: 'HDLBits 刷题全记录',
           collapsed: false,
           items: [
-            { text: '数字电路基础：从晶体管到 CPU', link: '/computer-basics/transistor-to-cpu' },
-            { text: '操作系统核心原理与进程调度', link: '/computer-basics/os-principles' },
-            { text: '计算机网络：从输入 URL 到页面展示', link: '/computer-basics/network-intro' }
-          ]
-        },
-        {
-          text: '二、开发环境与现代工具',
-          collapsed: false,
-          items: [
-            { text: '现代终端工具与 Git 高效协作', link: '/computer-basics/tools-and-git' }
+            { text: '刷题总览与导读', link: '/hdlbits/' },
+            { text: '01. 语言基础与入门', link: '/hdlbits/01-getting-started' },
+            { text: '02. 组合逻辑电路设计', link: '/hdlbits/02-combinational-logic' },
+            { text: '03. 时序逻辑电路设计', link: '/hdlbits/03-sequential-logic' },
+            { text: '04. 有限状态机实战', link: '/hdlbits/04-finite-state-machines' }
           ]
         }
       ],
-      '/programming/': [
+      '/ysyx/': [
         {
-          text: '现代 Web 开发技术',
+          text: '“一生一芯”学习记录',
           collapsed: false,
           items: [
-            { text: '现代前端工程化指南', link: '/programming/web-development' },
-            { text: 'Python 高效编程与工程实践', link: '/programming/python-tips' }
+            { text: '学习总览与路线', link: '/ysyx/' },
+            { text: '01. 预学习阶段：环境与工具链', link: '/ysyx/01-pre-study' },
+            { text: '02. PA 实验：模拟器 (NEMU)', link: '/ysyx/02-pa' },
+            { text: '03. NPC 硬件设计：手搓 CPU', link: '/ysyx/03-npc' }
           ]
         }
       ],
-      '/algorithms/': [
+      '/ic-interview/': [
         {
-          text: '算法思维与实战',
+          text: '数字 IC 核心八股',
           collapsed: false,
           items: [
-            { text: '算法与数据结构学习路线', link: '/algorithms/index' }
-          ]
-        }
-      ],
-      '/reading-notes/': [
-        {
-          text: '读书与知识管理',
-          collapsed: false,
-          items: [
-            { text: '打造个人第二大脑：数字花园实践', link: '/reading-notes/index' }
+            { text: '八股知识体系导读', link: '/ic-interview/' },
+            { text: '01. 静态时序分析 (STA)', link: '/ic-interview/01-sta-timing' },
+            { text: '02. 亚稳态与跨时钟域 (CDC)', link: '/ic-interview/02-cdc-metastability' },
+            { text: '03. FIFO 架构设计与握手', link: '/ic-interview/03-fifo-design' },
+            { text: '04. 数字电路低功耗设计', link: '/ic-interview/04-low-power' }
           ]
         }
       ]
     },
 
-    // 右侧大纲栏（与用户截图右侧的“页面导航”一致）
+    // 右侧大纲栏
     outline: {
-      level: [2, 3], // 抓取二级、三级标题
+      level: [2, 3],
       label: '页面导航'
     },
 
@@ -126,12 +113,12 @@ export default defineConfig({
       options: {
         translations: {
           button: {
-            buttonText: '搜索文档',
-            buttonAriaLabel: '搜索文档'
+            buttonText: '搜索笔记',
+            buttonAriaLabel: '搜索笔记'
           },
           modal: {
-            noResultsText: '未找到相关结果',
-            resetButtonTitle: '清除查询条件',
+            noResultsText: '未找到相关笔记',
+            resetButtonTitle: '清除搜索条件',
             footer: {
               selectText: '选择',
               navigateText: '切换',
@@ -156,6 +143,6 @@ export default defineConfig({
       }
     },
     returnToTopLabel: '返回顶部',
-    darkModeSwitchLabel: '深色模式切换'
+    darkModeSwitchLabel: '外观模式'
   }
 })
