@@ -4,38 +4,33 @@
 
 ---
 
-## 状态机标准三段式写法范式
+## 状态机二段式写法范式
 
 ```verilog
 // 1. 状态编码定义（建议使用 localparam）
-localparam S_IDLE  = 2'b00;
-localparam S_READ  = 2'b01;
-localparam S_WRITE = 2'b10;
+localparam IDLE  = 2'b00;
+localparam READ  = 2'b01;
+localparam WRITE = 2'b10;
 
-reg [1:0] current_state, next_state;
-
-// 第一段：时序逻辑，更新状态寄存器
+reg [1:0] state;
+// 第一段：时序逻辑，状态转移
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n)
-        current_state <= S_IDLE;
-    else
-        current_state <= next_state;
+        state <= IDLE;
+    else case（state）
+        IDEL: if else
+        READ: 
 end
 
-// 第二段：组合逻辑，计算下一状态次态转移
-always @(*) begin
-    next_state = current_state;
-    case (current_state)
-        S_IDLE:  if (start) next_state = S_READ;
-        S_READ:  if (read_done) next_state = S_WRITE;
-        S_WRITE: if (write_done) next_state = S_IDLE;
-        default: next_state = S_IDLE;
-    endcase
+// 第二段：输出
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n)
+        reg <= 0;
+    else if(state == )
+        reg <= ;
 end
 
-// 第三段：时序/组合逻辑，产生输出信号
-// 推荐使用寄存器输出以消除组合逻辑毛刺
-```
+
 
 ---
 
