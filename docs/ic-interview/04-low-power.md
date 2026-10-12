@@ -20,7 +20,7 @@ $$P_{total} = P_{dynamic} + P_{short\_circuit} + P_{leakage}$$
 
 ## 2. 常用低功耗技术与层级
 
-- **系统级 / 架构级**：动态电压与频率调节 (DVFS)、电源门控 (Power Gating)。
+- **系统级 / 架构级**：不同区域用不同电压；动态电压与频率调节 (DVFS)、电源门控 (Power Gating)。
 - **RTL 级**：
   - 门控时钟 (Clock Gating, ICG 单元) —— 业界使用最广、收益最直接！
   - 操作数隔离 (Operand Isolation)。
