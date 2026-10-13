@@ -60,9 +60,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '讲义总览与知识导图', link: '/fpga/' },
-            { text: '第一章 FPGA 基本结构与底层逻辑', link: '/fpga/01-basic-architecture' },
-            { text: '第二章 开发流程与 XDC 时序约束', link: '/fpga/02-dev-flow-and-xdc' },
-            { text: '第三章 面向底层结构的 RTL 优化', link: '/fpga/03-coding-and-optimization' }
+            { text: '第一章 FPGA 基本结构与底层逻辑', link: '/fpga/01-basic-architecture' }
           ]
         }
       ],
