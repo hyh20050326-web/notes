@@ -31,6 +31,11 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { 
+        text: 'FPGA 基础', 
+        link: '/fpga/01-basic-architecture',
+        activeMatch: '/fpga/'
+      },
+      { 
         text: 'HDL Bits', 
         link: '/hdlbits/',
         activeMatch: '/hdlbits/'
@@ -49,6 +54,18 @@ export default defineConfig({
 
     // 侧边栏多级导航树配置
     sidebar: {
+      '/fpga/': [
+        {
+          text: 'FPGA 核心复习讲义',
+          collapsed: false,
+          items: [
+            { text: '讲义总览与知识导图', link: '/fpga/' },
+            { text: '第一章 FPGA 基本结构与底层逻辑', link: '/fpga/01-basic-architecture' },
+            { text: '第二章 开发流程与 XDC 时序约束', link: '/fpga/02-dev-flow-and-xdc' },
+            { text: '第三章 面向底层结构的 RTL 优化', link: '/fpga/03-coding-and-optimization' }
+          ]
+        }
+      ],
       '/hdlbits/': [
         {
           text: 'HDLBits 刷题全记录',
