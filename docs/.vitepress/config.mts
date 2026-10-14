@@ -73,7 +73,9 @@ export default defineConfig({
             { text: '01. 语言基础与入门', link: '/hdlbits/01-getting-started' },
             { text: '02. 组合逻辑电路设计', link: '/hdlbits/02-combinational-logic' },
             { text: '03. 时序逻辑电路设计', link: '/hdlbits/03-sequential-logic' },
-            { text: '04. 有限状态机实战', link: '/hdlbits/04-finite-state-machines' }
+            { text: '04. 有限状态机实战', link: '/hdlbits/04-finite-state-machines' },
+            { text: '05. 二分频与三分频电路设计', link: '/hdlbits/05-clock-divider' },
+            { text: '06. FIFO 架构设计与实现', link: '/hdlbits/06-fifo-design' }
           ]
         }
       ],
