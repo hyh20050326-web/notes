@@ -99,7 +99,7 @@ export default defineConfig({
             { text: '八股知识体系导读', link: '/ic-interview/' },
             { text: '01. 静态时序分析 (STA)', link: '/ic-interview/01-sta-timing' },
             { text: '02. 亚稳态与跨时钟域 (CDC)', link: '/ic-interview/02-cdc-metastability' },
-            { text: '03. FIFO 架构设计与握手', link: '/ic-interview/03-fifo-design' },
+            { text: '03. FIFO 空满判断', link: '/ic-interview/03-fifo-design' },
             { text: '04. 数字电路低功耗设计', link: '/ic-interview/04-low-power' },
             { text: '05. 复位机制与同步释放电路设计', link: '/ic-interview/05-reset-design' }
           ]
