@@ -73,9 +73,7 @@ export default defineConfig({
             { text: '01. 语言基础与入门', link: '/hdlbits/01-getting-started' },
             { text: '02. 组合逻辑电路设计', link: '/hdlbits/02-combinational-logic' },
             { text: '03. 时序逻辑电路设计', link: '/hdlbits/03-sequential-logic' },
-            { text: '04. 有限状态机实战', link: '/hdlbits/04-finite-state-machines' },
-            { text: '05. 二分频与三分频电路设计', link: '/hdlbits/05-clock-divider' },
-            { text: '06. FIFO 架构设计与实现', link: '/hdlbits/06-fifo-design' }
+            { text: '04. 有限状态机实战', link: '/hdlbits/04-finite-state-machines' }
           ]
         }
       ],
@@ -99,9 +97,10 @@ export default defineConfig({
             { text: '八股知识体系导读', link: '/ic-interview/' },
             { text: '01. 静态时序分析 (STA)', link: '/ic-interview/01-sta-timing' },
             { text: '02. 亚稳态与跨时钟域 (CDC)', link: '/ic-interview/02-cdc-metastability' },
-            { text: '03. FIFO 空满判断', link: '/ic-interview/03-fifo-design' },
+            { text: '03. FIFO 架构设计与实现', link: '/ic-interview/03-fifo-design' },
             { text: '04. 数字电路低功耗设计', link: '/ic-interview/04-low-power' },
-            { text: '05. 复位机制与同步释放电路设计', link: '/ic-interview/05-reset-design' }
+            { text: '05. 复位机制与同步释放电路设计', link: '/ic-interview/05-reset-design' },
+            { text: '06. 奇偶分频电路设计与原理分析', link: '/ic-interview/06-clock-divider' }
           ]
         }
       ]
