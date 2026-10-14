@@ -15,7 +15,7 @@ graph LR
 
 - **[01. 语言基础与入门](./01-getting-started.md)**：Wire、Vector、模块例化、三元运算符等。
 - **[02. 组合逻辑电路](./02-combinational-logic.md)**：门电路、多路选择器 MUX、算术逻辑单元 ALU、加法器。
-- **[03. 时序逻辑电路](./03-sequential-logic.md)**：D 触发器、寄存器、计数器、移位寄存器。
+- **[03. 时序逻辑电路](./03-sequential-logic.md)**：D 触发器同步/异步复位、★经典真题精析：黑盒电路有效建立时间（Setup）与保持时间（Hold）推导计算。
 - **[04. 有限状态机 (FSM)](./04-finite-state-machines.md)**：一段式/二段式/三段式状态机建模规范与复杂序列检测。
 
 ::: tip 💡 进阶手撕电路专栏导流
