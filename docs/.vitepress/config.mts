@@ -100,7 +100,8 @@ export default defineConfig({
             { text: '03. FIFO 架构设计与实现', link: '/ic-interview/03-fifo-design' },
             { text: '04. 数字电路低功耗设计', link: '/ic-interview/04-low-power' },
             { text: '05. 复位机制与同步释放电路设计', link: '/ic-interview/05-reset-design' },
-            { text: '06. 奇偶分频电路设计与原理分析', link: '/ic-interview/06-clock-divider' }
+            { text: '06. 奇偶分频电路设计与原理分析', link: '/ic-interview/06-clock-divider' },
+            { text: '07. 按键消抖电路设计与原理分析', link: '/ic-interview/07-key-filter' }
           ]
         }
       ]
