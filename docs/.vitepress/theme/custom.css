@@ -51,3 +51,117 @@
   border-radius: 8px;
   margin: 1.25rem 0;
 }
+
+/* ========================================================
+   可视化架构图与拓扑卡片样式 (零依赖、全兼容、永不白屏)
+   ======================================================== */
+.arch-tree {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+}
+.arch-root {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--vp-c-divider);
+}
+.arch-root .arch-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--vp-c-brand-1);
+  border-radius: 9999px;
+  margin-bottom: 0.25rem;
+}
+.arch-root .arch-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+.arch-branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.arch-card {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.arch-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.arch-card-header {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--vp-c-brand-1);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+.arch-card-body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* 线性流程箭头卡片 (用于流程走向) */
+.flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+  padding: 1rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+}
+.flow-step-box {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-brand-2);
+  border-radius: 6px;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.flow-arrow {
+  color: var(--vp-c-brand-1);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* 时序与对比分栏盒子 */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.compare-col {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.compare-col.highlight {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+.compare-col-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--vp-c-text-1);
+}

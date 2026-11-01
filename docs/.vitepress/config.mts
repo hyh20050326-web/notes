@@ -49,6 +49,11 @@ export default defineConfig({
         text: '基础八股', 
         link: '/ic-interview/',
         activeMatch: '/ic-interview/'
+      },
+      { 
+        text: '数字验证 (SV & UVM)', 
+        link: '/verification/',
+        activeMatch: '/verification/'
       }
     ],
 
@@ -102,6 +107,37 @@ export default defineConfig({
             { text: '05. 复位机制与同步释放电路设计', link: '/ic-interview/05-reset-design' },
             { text: '06. 奇偶分频电路设计与原理分析', link: '/ic-interview/06-clock-divider' },
             { text: '07. 按键消抖电路设计与原理分析', link: '/ic-interview/07-key-filter' }
+          ]
+        }
+      ],
+      '/verification/': [
+        {
+          text: '数字验证体系总览',
+          collapsed: false,
+          items: [
+            { text: '专栏导读与网课/教材索引', link: '/verification/' }
+          ]
+        },
+        {
+          text: 'SystemVerilog 语言核心 (绿皮书)',
+          collapsed: false,
+          items: [
+            { text: '01. 验证导论与分层测试平台', link: '/verification/01-sv-intro-and-methodology' },
+            { text: '02. 数据类型精粹与数组操作', link: '/verification/02-sv-data-types' },
+            { text: '03. 接口、时钟块与虚接口', link: '/verification/03-sv-interface-and-clocking' },
+            { text: '04. 面向对象编程 OOP 指南', link: '/verification/04-sv-oop-principles' },
+            { text: '05. 受约束的随机激励 CRV', link: '/verification/05-sv-randomization' },
+            { text: '06. 线程并发与线程间通信 IPC', link: '/verification/06-sv-threads-and-ipc' },
+            { text: '07. 功能覆盖率深度解析', link: '/verification/07-sv-coverage' }
+          ]
+        },
+        {
+          text: 'UVM 验证方法学与实战',
+          collapsed: false,
+          items: [
+            { text: '08. UVM 体系总览与 Phase 机制', link: '/verification/08-uvm-overview-and-architecture' },
+            { text: '09. UVM 核心组件与 TLM 通信', link: '/verification/09-uvm-components-and-tlm' },
+            { text: '10. MCDF 芯片验证平台全流程实战', link: '/verification/10-uvm-mcdf-case-study' }
           ]
         }
       ]

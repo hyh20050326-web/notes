@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "数字 IC 学习笔记"
   text: "从 FPGA 底层架构到 RISC-V 芯片设计"
-  tagline: "FPGA 核心讲义 · HDLBits 刷题 · “一生一芯”手搓 CPU · 数字 IC 面试八股"
+  tagline: "FPGA 核心讲义 · HDLBits 刷题 · “一生一芯”手搓 CPU · 数字 IC 面试八股 · SV/UVM 数字验证"
   image:
     src: /logo.svg
     alt: 数字 IC 知识库 Logo
@@ -21,6 +21,9 @@ hero:
     - theme: alt
       text: 📚 基础八股精选
       link: /ic-interview/
+    - theme: alt
+      text: 🔬 数字验证实战
+      link: /verification/
 
 features:
   - icon: 📐
@@ -35,4 +38,7 @@ features:
   - icon: 🎯
     title: 数字 IC 核心基础八股
     details: 提炼静态时序分析 STA、跨时钟域 CDC、亚稳态、异步 FIFO 以及低功耗设计的高频面试硬核干货。
+  - icon: 🔬
+    title: 数字验证 (SV & UVM) 实战
+    details: 紧扣绿皮书与工程网课，系统梳理 SystemVerilog 语言核心、分层测试平台、CRV 约束随机、功能覆盖率、UVM Phase 与 MCDF 平台搭建。
 ---
