@@ -28,56 +28,6 @@ SystemVerilog 将数据类型清晰地划分为**四态逻辑（4-state）**与*
 ## 2. 数组家族：四大存储结构全景对比
 
 验证过程中经常需要处理大量数据包与复杂协议帧，SystemVerilog 提供了四种各具特色的数组类型：
-
-<div class="arch-tree">
-  <div class="arch-root">
-    <div class="arch-badge">数据结构全景</div>
-    <div class="arch-title">SystemVerilog 核心数组类型家族</div>
-  </div>
-  <div class="arch-branches">
-    <div class="arch-card">
-      <div class="arch-card-header">📌 定宽数组 (Fixed-size Array)</div>
-      <div class="arch-card-body">
-        <ul>
-          <li><strong>编译时确定大小</strong>：固定内存连续分配</li>
-          <li><strong>合并型 (packed)</strong>：比特位紧凑拼接，支持位切片</li>
-          <li><strong>非合并型 (unpacked)</strong>：各元素独立存放，访问效率高</li>
-        </ul>
-      </div>
-    </div>
-    <div class="arch-card">
-      <div class="arch-card-header">⚡ 动态数组 (Dynamic Array)</div>
-      <div class="arch-card-body">
-        <ul>
-          <li><strong>运行期动态开辟</strong>：<code>dyn = new[N]</code></li>
-          <li>底层连续堆内存，支持 <code>.size()</code> 与 <code>.delete()</code></li>
-          <li><strong>适用场景</strong>：变长网络数据报、固定批次传输</li>
-        </ul>
-      </div>
-    </div>
-    <div class="arch-card">
-      <div class="arch-card-header">📥 队列 (Queue)</div>
-      <div class="arch-card-body">
-        <ul>
-          <li><strong>动态伸缩双端容器</strong>：<code>[$]</code> 声明，无需 <code>new</code></li>
-          <li>原生方法：<code>push_back</code> / <code>pop_front</code> / <code>insert</code></li>
-          <li><strong>适用场景</strong>：FIFO 硬件缓冲池与事务暂存池</li>
-        </ul>
-      </div>
-    </div>
-    <div class="arch-card">
-      <div class="arch-card-header">🗺️ 关联数组 (Associative Array)</div>
-      <div class="arch-card-body">
-        <ul>
-          <li><strong>稀疏索引映射表</strong>：<code>assoc[key_type]</code> 类似字典</li>
-          <li>仅对真实写入的离散地址消耗物理内存</li>
-          <li><strong>适用场景</strong>：32/64 位 CPU 稀疏大容量 Memory 建模</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
 ### 1. 定宽数组 (Fixed-size Array)：合并型 vs 非合并型
 
 SystemVerilog 中通过维度方括号声明在变量名的**左侧**还是**右侧**，来区分数组是连续紧凑存放还是独立离散存放：
