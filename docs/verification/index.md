@@ -18,6 +18,7 @@
         <ul>
           <li><strong>01. 验证导论与分层思想</strong>：HVL 核心演进、Layered Testbench 架构</li>
           <li><strong>02. 数据类型与动态容器</strong>：2态/4态、动态数组、队列、关联数组</li>
+          <li><strong>02.5 过程语句与子程序</strong>：Task vs Function、Ref 零拷贝传参、Static vs Automatic 陷阱</li>
           <li><strong>03. 接口与时钟块</strong>：Interface、Clocking Block、Virtual Interface 桥梁</li>
           <li><strong>04. 面向对象 OOP</strong>：类与句柄、虚方法多态、深浅拷贝、Blueprint 模式</li>
           <li><strong>05. 约束随机化 (CRV)</strong>：rand/randc、solve...before 概率引导、软约束 soft</li>
@@ -56,8 +57,9 @@
 | :--- | :--- | :--- | :--- |
 | **[01. 验证导论与分层测试平台](./01-sv-intro-and-methodology.md)** | HVL vs HDL、验证流程、分层架构、简历技能提炼 | 第 1 章（验证导论） | `P1` SV第一章及简历补充 |
 | **[02. 数据类型与内存管理](./02-sv-data-types.md)** | 2态/4态数据类型、动态数组/队列/关联数组、方法内置函数 | 第 2 章（数据类型） | `P2` SV第二章数据类型 |
+| **[02.5 过程语句与子程序机制](./02-5-sv-procedural-statements-and-routines.md)** | Task/Function 差异、Ref 零拷贝传参、Static/Automatic 并发踩踏陷阱、final 块 | 第 3 章（过程语句和子程序） | 核心必考 / 绿皮书重点 |
 | **[03. 接口、时钟块与虚接口](./03-sv-interface-and-clocking.md)** | `interface` 封装、`clocking block` 消除时序竞争、`virtual interface` 桥接 | 第 4、10 章（连接设计与测试平台） | 视频穿插 / 绿皮书重点 |
-| **[04. 面向对象编程 (OOP) 核心指南](./04-sv-oop-principles.md)** | 类与句柄、封装/继承/多态、虚方法、深浅拷贝、Blueprint 模式 | 第 3、5、8 章（OOP 基础与高级技巧） | `P3` SV第三/五/八章 面向对象编程 |
+| **[04. 面向对象编程 (OOP) 核心指南](./04-sv-oop-principles.md)** | 类与句柄、封装/继承/多态、虚方法、深浅拷贝、Blueprint 模式 | 第 5、8 章（OOP 基础与高级技巧） | `P3` SV第五/八章 面向对象编程 |
 | **[05. 受约束的随机激励 (CRV) 实战](./05-sv-randomization.md)** | `rand/randc`、`inside/dist` 约束、`solve...before` 概率引导、随机冲突排查 | 第 6 章（随机化） | 验证核心 / 绿皮书重点 |
 | **[06. 线程并发与线程间通信 (IPC)](./06-sv-threads-and-ipc.md)** | `fork...join/any/none`、动态线程变量陷阱、Event / Semaphore / Mailbox | 第 7 章（线程及线程间通信） | 验证核心 / 绿皮书重点 |
 | **[07. 功能覆盖率深度解析](./07-sv-coverage.md)** | 代码/功能/断言覆盖率闭环、`covergroup`、仓 `bins` 分类、交叉覆盖率 `cross` | 第 9 章（功能覆盖率） | `P4` SV第九章 覆盖率（上） |

@@ -124,6 +124,7 @@ export default defineConfig({
           items: [
             { text: '01. 验证导论与分层测试平台', link: '/verification/01-sv-intro-and-methodology' },
             { text: '02. 数据类型精粹与数组操作', link: '/verification/02-sv-data-types' },
+            { text: '02.5 过程语句、子程序与生命周期', link: '/verification/02-5-sv-procedural-statements-and-routines' },
             { text: '03. 接口、时钟块与虚接口', link: '/verification/03-sv-interface-and-clocking' },
             { text: '04. 面向对象编程 OOP 指南', link: '/verification/04-sv-oop-principles' },
             { text: '05. 受约束的随机激励 CRV', link: '/verification/05-sv-randomization' },
